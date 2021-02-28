@@ -20,7 +20,6 @@ class Config(object):
     LANG = os.environ.get("LANG", "en")
     PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
-    DB_URI = os.environ.get("DATABASE_URL", None)
     OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", "/usr/bin/chromedriver")
@@ -73,7 +72,6 @@ class Config(object):
     CLEAN_GROUPS = os.environ.get("CLEAN_GROUPS", False)
     ENABLE_HAREM = os.environ.get("ENABLE_HAREM", False)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
-    DB_URI = os.environ.get("DATABASE_URL", None)
     TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", './fridaybot/DOWNLOADS/')
     LOGGER = True
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
@@ -189,7 +187,6 @@ class Config(object):
     # For Databases
     # can be None in which case modules requiring
     # DataBase would not work
-    DB_URI = os.environ.get("DATABASE_URL", None)
     # number of rows of buttons to be displayed in .helpme command
     NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD = int(
         os.environ.get("NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD", 5)
