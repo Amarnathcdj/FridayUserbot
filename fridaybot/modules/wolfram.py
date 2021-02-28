@@ -42,7 +42,7 @@ async def _(event):
         res = get(server)
         if "Wolfram Alpha did not understand" in res.text:
             await event.edit(
-                "Sorry, Friday's AI systems couldn't recognized your question.."
+                "Sorry, Luna's AI systems couldn't recognized your question.."
             )
             return
         await event.edit(f"**{i}**\n\n" + res.text, parse_mode="markdown")
