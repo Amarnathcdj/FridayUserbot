@@ -148,11 +148,7 @@ if Config.ENABLE_ASSISTANTBOT == "ENABLE":
 else:
     wsta = "Friday Has Been Installed Sucessfully"
 
-total_clients = 1
-if failed2 is None:
-    total_clients += 1
-if failed3 is None:
-    total_clients += 1
+
     
 if wsta[0].lower() != Lol[0]:
    sys.exit("Bug Detected ! // UserBot is Exiting.")
@@ -164,7 +160,6 @@ Python Version : {platform.python_version()}
 Friday-Userbot Version : V{friday_version}
 Support Chat : @FridayChat
 Updates Channel : @FridaySupportOfficial
-Total Clients : {total_clients}
 -------------------------------------------""")
         
 bot.tgbot.loop.run_until_complete(check_inline_on_warner(bot.tgbot))
