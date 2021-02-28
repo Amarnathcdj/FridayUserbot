@@ -3,7 +3,6 @@ from fridaybot.utils import friday_on_cmd
 from fridaybot.Configs import Config
 issudousing = Config.SUDO_USERS
 islogokay = Config.PRIVATE_GROUP_ID
-isdbfine = Config.DB_URI
 isherokuokay = Config.HEROKU_APP_NAME
 gdriveisshit = Config.AUTH_TOKEN_DATA
 wttrapi = Config.OPEN_WEATHER_MAP_APPID
@@ -45,15 +44,10 @@ if hmmok:
 else:
     meiko = "Not Added ❌"
 
-if isdbfine:
-    dbstats = "Fine ✅"
-else:
-    dbstats = "Not Fine ❌"
 
 inlinestats = (
     f"✘ SHOWING FRIDAY STATS ✘\n"
     f"VERSION = {currentversion} \n"
-    f"DATABASE = {dbstats} \n"
     f"SUDO = {amiusingsudo} \n"
     f"LOG-CHAT = {logchat} \n"
     f"HEROKU = {riplife} \n"
