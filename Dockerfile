@@ -35,9 +35,6 @@ RUN apt-get install -y\
     libgl1 \
     musl \
     libcurl4-openssl-dev \
-    postgresql \
-    postgresql-client \
-    postgresql-server-dev-all \
     openssl \
     mediainfo \
     wget \
@@ -46,9 +43,7 @@ RUN apt-get install -y\
     python3-pip \
     libreadline-dev \
     zipalign \
-    sqlite3 \
     ffmpeg \
-    libsqlite3-dev \
     axel \
     zlib1g-dev \
     recoverjpeg \
@@ -67,8 +62,6 @@ RUN if [ ! -e /usr/bin/python ]; then ln -sf /usr/bin/python3 /usr/bin/python; f
 # Clear Cache
 RUN rm -r /root/.cache
 # Install Chrome Driver, Chrome, And Opencv
-RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && apt install -y ./google-chrome-stable_current_amd64.deb && rm google-chrome-stable_current_amd64.deb
-RUN wget https://chromedriver.storage.googleapis.com/88.0.4324.96/chromedriver_linux64.zip && unzip chromedriver_linux64.zip && chmod +x chromedriver && mv -f chromedriver /usr/bin/ && rm chromedriver_linux64.zip
 RUN wget -O opencv.zip https://github.com/opencv/opencv/archive/master.zip && unzip opencv.zip && mv -f opencv-master /usr/bin/ && rm opencv.zip
 # Git Clone Main Repo And Config As WorkDir
 RUN git clone https://github.com/Amarnathcdj/bgjm /root/fridaybot
