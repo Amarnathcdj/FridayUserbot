@@ -26,10 +26,6 @@ if not Config.TG_BOT_TOKEN_BF_HER:
     starky.warning("Please Add Private Group ID For Proper Functioning Of UserBot.")
     quit(1)
     
-if not Config.DB_URI:    
-    starky.warning("Please Add Database Url For Proper Functioning Of UserBot.")
-    quit(1)
-    
 if Config.STRING_SESSION:
     session_name = str(Config.STRING_SESSION)
     bot = TelegramClient(StringSession(session_name), Config.APP_ID, Config.API_HASH)
